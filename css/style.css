@@ -1,0 +1,93 @@
+/* Fonts */
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+
+  /* Warm palette */
+  --warm-100: #fff8ec; /* cream */
+  --warm-200: #ffe9cf;
+  --warm-300: #f8d6b1;
+  --warm-500: #d2691e; /* cinnamon/orange */
+  --warm-600: #b35819;
+  --warm-700: #8b4513; /* warm brown */
+  --deep-900: #2a1e1a; /* deep cocoa */
+
+  --text-dark: #2b2b2b;
+  --text-muted: #6c757d;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: #fff;
+}
+
+.font-display { font-family: var(--font-display); }
+
+/* Navbar */
+.bg-warm { background: linear-gradient(90deg, var(--warm-700), var(--warm-600)); }
+.navbar .nav-link { color: #f8f9fa; opacity: 0.9; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #ffffff; opacity: 1; }
+.navbar-brand { font-family: var(--font-display); letter-spacing: 0.5px; }
+
+/* Hero */
+.hero-section {
+  min-height: 85vh;
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35));
+}
+.hero-section .container { position: relative; z-index: 2; }
+.btn-contrast { background-color: #ffffff; color: var(--warm-700); border: none; }
+.btn-contrast:hover { background-color: var(--warm-200); color: var(--warm-700); }
+
+/* Sections */
+.section-padding { padding: 80px 0; }
+.bg-cream { background-color: var(--warm-100); }
+.section-title { font-family: var(--font-display); color: var(--warm-700); }
+
+/* Menu cards */
+.menu-card .card-title { font-weight: 600; }
+.menu-card .card-footer { background-color: transparent; }
+.menu-card .price { font-weight: 600; color: var(--warm-700); }
+.badge.bg-warm-2 { background-color: var(--warm-500); }
+
+/* Buttons */
+.btn-warm { background-color: var(--warm-600); color: #fff; border: none; }
+.btn-warm:hover { background-color: var(--warm-700); color: #fff; }
+
+/* Footer */
+.bg-deep { background-color: var(--deep-900); }
+.social-link:hover { color: #fff !important; }
+
+/* Forms */
+.form-control:focus, .form-select:focus {
+  border-color: var(--warm-500);
+  box-shadow: 0 0 0 .2rem rgba(210,105,30,.2);
+}
+
+/* Utilities */
+img { object-fit: cover; }
+
+@media (max-width: 576px) {
+  .section-padding { padding: 56px 0; }
+  .hero-section { min-height: 70vh; }
+}
+
+
+
+
+
+
+
+

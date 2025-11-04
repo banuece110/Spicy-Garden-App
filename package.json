@@ -1,0 +1,25 @@
+{
+  "name": "restaurant-pos-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "seed": "node backend/seed.js"
+  },
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "connect-sqlite3": "0.9.15",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "express-session": "1.18.1",
+    "sqlite3": "5.1.7",
+    "better-sqlite3": "9.6.0",
+    "cors": "2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "3.0.1"
+  }
+}
+
+

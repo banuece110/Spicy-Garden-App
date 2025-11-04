@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant - Menu</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/vendor/qrcode.min.js"></script>
+  <script defer src="/app.js"></script>
+  <link rel="icon" href="data:," />
+  <style>@media print {.no-print{display:none !important;} .receipt{display:block !important;}}</style>
+  </head>
+<body>
+  <header class="no-print">
+    <h1>Restaurant</h1>
+    <nav>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu" id="menuGrid"></section>
+    <aside class="cart">
+      <h2>Cart</h2>
+      <div id="cartItems"></div>
+      <div class="totals">
+        <div>Subtotal: ₹ <span id="subtotal">0.00</span></div>
+        <div>Total: ₹ <span id="total">0.00</span></div>
+      </div>
+      <div class="actions no-print">
+        <button id="payNowBtn">Pay Now</button>
+        <button id="printBtn">Print Bill</button>
+        <button id="clearBtn" class="secondary">Clear Cart</button>
+      </div>
+    </aside>
+  </main>
+
+  <div class="modal no-print" id="qrModal">
+    <div class="modal-content">
+      <h3>Scan to Pay</h3>
+      <div id="qrcode"></div>
+      <p id="paymentNote"></p>
+      <button id="closeQr">Close</button>
+    </div>
+  </div>
+
+  <section class="receipt" id="receipt" style="display:none">
+    <h2>Receipt</h2>
+    <div id="receiptItems"></div>
+    <div>Grand Total: ₹ <span id="receiptTotal">0.00</span></div>
+    <small>Thank you!</small>
+  </section>
+</body>
+</html>
+
+
