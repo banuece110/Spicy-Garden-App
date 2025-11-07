@@ -48,7 +48,7 @@ app.get('/api/config', (_req, res) => {
 });
 
 // Static frontend
-const publicDir = path.join(__dirname, '..', 'public');
+const publicDir = path.join(__dirname, '..');
 app.use(express.static(publicDir));
 
 // Fallback to index.html
