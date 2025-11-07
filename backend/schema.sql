@@ -31,5 +31,18 @@ CREATE TABLE IF NOT EXISTS order_items (
   FOREIGN KEY(item_id) REFERENCES menu_items(id)
 );
 
+CREATE TABLE IF NOT EXISTS reservations (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  reservation_date TEXT NOT NULL,
+  reservation_time TEXT NOT NULL,
+  guests TEXT NOT NULL,
+  special_requests TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  status TEXT NOT NULL DEFAULT 'pending'
+);
+
 
 

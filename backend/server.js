@@ -10,6 +10,7 @@ const { requireAuth, requireAdmin, attachUserIfAny } = require('./middleware/aut
 const authRoutes = require('./routes/auth');
 const menuRoutes = require('./routes/menu');
 const orderRoutes = require('./routes/orders');
+const reservationRoutes = require('./routes/reservations');
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use(attachUserIfAny);
 app.use('/api/auth', authRoutes);
 app.use('/api/menu', menuRoutes);
 app.use('/api', orderRoutes);
+app.use('/api', reservationRoutes);
 
 // Public config for client
 app.get('/api/config', (_req, res) => {
